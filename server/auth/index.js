@@ -13,7 +13,8 @@ router.get('/', (req,res) => {
 
 function validUser(user) {
     const validEmail = 
-        typeof user.email == 'string' && user.email.trim() != '';
+        typeof user.email == 'string' 
+        && user.email.trim() != '';
     const validPassword = 
         typeof user.password == 'string' 
         && user.password.trim() != ''

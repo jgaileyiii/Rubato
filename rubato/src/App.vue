@@ -1,12 +1,52 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <h1>Rubato</h1>
+      <Signup v-on:add-user="signUp"/>
+      <br/>
+      <br/>
+      <Login v-on:login="login" />
   </div>
 </template>
+
+<script>
+import Signup from './components/Signup'
+import Login from './components/Login'
+
+export default {
+  name: 'app',
+  components: {
+    Signup,
+    Login
+  },
+  computed: {
+
+  },
+  methods: {
+    signUp(newUser) {
+      const { username, email, password } = newUser
+      fetch('http://localhost:3000/auth/signup', {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json',
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(username, email, password)
+      })
+    },
+    login(user) {
+      const { username, password } = user
+      fetch('http://localhost:3000/auth/signup', {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json',
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(username, password)
+      })
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

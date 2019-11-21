@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
     }
   });
   
-  router.get('/:id/project', (req,res)=>{
+  router.get('/:id/project', (req,res) => {
     if (!isNaN(req.params.id)) {
       queries.getByUser(req.params.id).then(projects => {
         res.json(projects);
