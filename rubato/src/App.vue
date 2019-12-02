@@ -1,51 +1,51 @@
 <template>
   <div id="app">
+    <header>
       <h1>Rubato</h1>
-      <Signup v-on:add-user="signUp"/>
-      <br/>
-      <br/>
-      <Login v-on:login="login" />
+        <h2 v-if="user != null" :key="user.id">{{ user }}</h2>
+      <nav>
+      <ul>
+        <li>
+          <router-link :to="{name: 'Signup'}">Signup</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'Login'}">Login</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'Projects'}">Projects</router-link>
+        </li>
+      </ul>
+      <button v-on:click="logout">Logout</button>
+      </nav>
+      </header>
+      <router-view />
   </div>
 </template>
 
 <script>
-import Signup from './components/Signup'
-import Login from './components/Login'
 
 export default {
   name: 'app',
-  components: {
-    Signup,
-    Login
-  },
   computed: {
-
-  },
+    user() {
+      return this.$store.getters.username
+      }
+    },    
   methods: {
-    signUp(newUser) {
-      const { username, email, password } = newUser
-      fetch('http://localhost:3000/auth/signup', {
-        method: "POST",
+    logout(){
+      fetch('http://localhost:3000/auth/logout', {
+        method: "GET",
         headers: {
-          'Accept': 'application/json',
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify(username, email, password)
-      })
-    },
-    login(user) {
-      const { username, password } = user
-      fetch('http://localhost:3000/auth/signup', {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json',
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify(username, password)
-      })
+          "Accept": "application/json",
+          "Content-type": "application/json"
+          },
+          credentials: 'same-origin',
+        }).then(localStorage.clear())
+          this.$store.dispatch('logout')
+      }
     }
   }
-}
+
 </script>
 
 <style lang="scss">

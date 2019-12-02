@@ -4,7 +4,9 @@ const router = express.Router()
 
 const queries = require('../db/queries')
 
-router.get('/:id', (req, res) => {
+const authMiddleware = require('../auth/middleware')
+
+router.get('/:id', authMiddleware.allowAccess, (req, res) => {
     if (!isNaN(req.params.id)) {
       queries.getOne(req.params.id).then(user => {
         if (user) {
@@ -33,5 +35,7 @@ router.get('/:id', (req, res) => {
     res.status(statusCode);
     res.json({message});
   }
+
+  
   
   module.exports = router;

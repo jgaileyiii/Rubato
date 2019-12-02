@@ -9,8 +9,9 @@ const cors = require('cors')
 
 const app = express();
 
-const users = require('./api/users')
+const user = require('./api/users')
 const auth = require('./auth')
+const authMiddleware = require('./auth/middleware')
 
 
 
@@ -19,23 +20,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('daisy_bloodh@und'));
 app.use(cors({
-  origin: 'http://localhost:8080',
+  origin: 'http://rubato.com:8080',
   credentials: true
 }))
 
 app.use('/auth', auth)
-app.use('/api/v1/users', users)
+app.use('/api/users', authMiddleware.ensureLoggedIn, user)
+
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  const err = new Error('Not Found')
-  err.status = 404
-  next(err)
-});
-
-// error handler
 app.use(function(err, req, res, next) {
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   res.status(err.status || 500);
   res.json({

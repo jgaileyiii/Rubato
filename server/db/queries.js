@@ -9,8 +9,8 @@ module.exports = {
     getByUser: function (id) {
         return knex('project').where('user_id', id);
     },
-    getOneByEmail: function (email) {
-        return knex('user').where('email', email).first()
+    getOneByUsername: function (username) {
+        return knex('user').where('username', username).first()
     },
     create: function (user) {
         return knex('user').insert(user, 'id').then(ids => {
