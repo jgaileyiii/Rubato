@@ -3,11 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import AudioRecorder from 'vue-audio-recorder'
+require('@/css/main.nightmode.css')
+
 
 Vue.config.productionTip = false
 
-Vue.use(AudioRecorder)
+
 
 
 

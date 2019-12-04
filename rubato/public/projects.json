@@ -1,0 +1,90 @@
+{ "projects": 
+    [{
+        "id": 1,
+        "name": "Guitar Sonata",
+        "tasks": 
+        [{
+            "id": 1,
+            "title": "Develop Primary and Secondary themes",
+            "description": "Finish Secondary theme. Rework modulation to subdominant: common-chord or common-tone?",
+            "status": "Incomplete",
+            "priority": "Low",
+            "deadline": "None"
+        },
+        {
+            "id": 2,
+            "title": "Rework Recapitulation",
+            "description": "Awkward modulation back to tonic.",
+            "status": "Incomplete",
+            "priority": "Medium",
+            "deadline": "None"
+        },
+        {
+            "id": 3,
+            "title": "Clean Up Notation",
+            "description": "Fix slurs and dynamics.",
+            "status" : "Complete",
+            "priority": "Low",
+            "deadline": "None"
+
+        }]
+    },
+    {
+        "id": 2,
+        "name": "Ambient Project: Winter",
+        "tasks": 
+        [{
+            "id": 1,
+            "title": "Field Recording",
+            "description": "Take field recordings of wind and forest sounds.",
+            "status": "Incomplete",
+            "priority": "Medium",
+            "deadline": "February 2020"
+        },
+        {
+            "id": 2,
+            "title": "Fix Moog",
+            "description": "Find issue with sequencer and arpeggiator",
+            "status": "Incomplete",
+            "priority": "High",
+            "deadeline": "December 2019" 
+        },
+        {
+            "id": 3,
+            "title": "Record strings and woodwinds",
+            "description": "Finish composing string/woodwind parts. Find plug-in with appropriate sound profiles.",
+            "status": "Complete",
+            "priority": "Medium",
+            "deadline": "November 2019"
+        }]
+    },
+    {
+        "id": 3,
+        "name": "OSDM Demo Tracks 1-2",
+        "tasks": 
+        [{  
+            "id": 1,
+            "title": "Find film samples for intro/outro music",
+            "description": "Reference 60's/70's horror, especially Argento.",
+            "status": "Incomplete",
+            "priority": "Low",
+            "deadline": "March 2020"
+        },
+        {
+            "id": 2,
+            "title": "Re-record guitar demo",
+            "description": "Tempo and ambient noise issues on takes 1 & 2.",
+            "status": "Incomplete",
+            "priority": "High",
+            "deadline": "January 2020"
+        },
+        {
+            "id": 3,
+            "title": "Find drummer",
+            "description": "Craigslist? Who knows a Drummer?, Program Drums?",
+            "status": "Incomplete",
+            "priority": "Medium",
+            "deadline": "March 2020"
+        }]
+    }]
+}

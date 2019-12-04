@@ -1,12 +1,24 @@
 <template>
-    <div id='Signup'>
-        <h2>Signup</h2>
-        <form @submit.prevent="signUp">
-            <input type='text' name='username' placeholder='username' required />
-            <input type='email' name='email' placeholder='email' required/>
-            <input type='password' name='password' placeholder='password' required />
-            <input type='submit' name="submit" value="Sign Up"/>
-        </form>
+    <div class="col-lg-10 col-md-12 order-1 order-lg-2 order-md-1">
+        <div class="row">
+            <div class="col-md-3 col-sm-12 contact-title">
+                <h5 class="login-header">Signup</h5>
+            </div>
+            <div class="col-md-9 col-sm-12">
+                <div class="login-form">
+                    <form class="contact-form" @submit.prevent="signUp">
+                        <div class="signup-form">
+                            <input class="form-control" type='text' name='username' placeholder='Username' required />
+                            <input class="form-control" type='email' name='email' placeholder='Email' required/>
+                            <input class="form-control" type='password' name='password' placeholder='Password' required />
+                        </div>
+                        <div class="signup-button">
+                            <button class="btn btn-primary" type='submit'>Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -36,6 +48,3 @@ export default {
 
 </script>
 
-<style scoped>
-
-</style>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700');
+
+
+html {
+  font-size: 14px;
+}
+
+div#team div.team-wrap p > span {
+  font-size: 16px;
+}
+
+div.preloader.preloader-xl p.loading-text {
+  font-size: 180px;
+  line-height: 180px;
+  margin-bottom: 0;
+}
+
+div.preloader.preloader-xl div  {
+  height: 180px;
+  margin-top: -120px;
+}
+
+@media ( min-width: 768px ) and ( max-width: 1024px ) and (orientation: portrait) {
+  div.preloader.preloader-xl p.loading-text {
+    font-size: 90px!important;
+    line-height: 100px!important;
+    margin-bottom: 0!important;
+  }
+
+  div.preloader.preloader-xl div  {
+    height: 120px!important;
+    margin-top: -90px!important;
+  }
+}
+
+.timer-wrap-outer .timer-wrap span {
+  padding-top: 3px;
+}
+
+.timer-wrap-outer span.sep {
+  padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, p, span, label, button, li, a, input, textarea, .owl-nav > div{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@media (max-width: 767px) {
+  div#hero button, div#hero a.cta {
+    font-size: 16px;
+  }
+
+  div#hero button span, div#hero a.cta span {
+    top: calc(50% - 13px);
+  }
+
+  .timer-wrap-outer span.sep {
+    top: -6px;
+    left: -3px;
+    background: transparent;
+    font-size: 24px !important;
+  }
+}
+
+@media ( min-width: 768px ) and ( max-width: 1024px ) and (orientation: portrait) {
+  div#hero button, div#hero a.cta {
+    font-size: 16px;
+  }
+
+  div#hero button span, div#hero a.cta span {
+    top: calc(50% - 13px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  section#fullscreen.fs-coming-soon h1 {
+    font-size: 110px;
+    line-height: 140px;
+    padding-top: 7px;
+  }
+
+  section#fullscreen.fs-coming-soon h2 {
+    font-size: 26px;
+  }
+
+  section#fullscreen.fs-coming-soon h3 {
+    font-size: 35px;
+  }
+}

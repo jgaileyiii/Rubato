@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700');
+
+div.preloader.preloader-xl p.loading-text {
+  font-size: 210px;
+  line-height: 210px;
+  margin-bottom: 0;
+}
+
+div.preloader.preloader-xl div  {
+  height: 210px;
+  margin-top: -150px;
+}
+
+h1, h2, h3, h4, h5, p, span, label, button, li, a, input, textarea, .owl-nav > div{
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+
+@media (max-width: 767px) {
+  .timer-wrap-outer span.sep {
+    top: -7px;
+    left: -2px;
+    background: transparent;
+    font-size: 24px!important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  div#prices div.prices-right > div div.prices-details {
+    padding-top: 24px;
+  }
+
+}

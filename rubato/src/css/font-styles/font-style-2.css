@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,700');
+
+html {
+  font-size: 14px;
+}
+
+div.preloader.preloader-xl p.loading-text {
+  font-size: 150px;
+  line-height: 150px;
+  margin-bottom: 0;
+}
+
+div.preloader.preloader-xl div  {
+  height: 150px;
+  margin-top: -90px;
+}
+
+@media ( min-width: 768px ) and ( max-width: 1024px ) and (orientation: portrait) {
+  div.preloader.preloader-xl p.loading-text {
+    font-size: 90px!important;
+    line-height: 100px!important;
+    margin-bottom: 0!important;
+  }
+
+  div.preloader.preloader-xl div  {
+    height: 120px!important;
+    margin-top: -90px!important;
+  }
+}
+
+nav h1 {
+  font-size: 100px;
+  line-height: 165px;
+  width: 100%;
+  margin-bottom: -30px;
+}
+
+@media (max-width: 767px) {
+  nav h1 {
+    font-size: 80px;
+    line-height: 165px;
+    width: 100%;
+    margin-bottom: -20px;
+  }
+
+  div#hero button span, div#hero a.cta span {
+    font-size: 16px;
+    top: 5px;
+  }
+}
+
+section#fullscreen h1 {
+  padding-top: 43px;
+  line-height: 130px;
+}
+
+@media (max-width: 767px) {
+  section#fullscreen h1 {
+    padding-top: 20px;
+    line-height: 100px;
+  }
+}
+
+section#fullscreen.fs-coming-soon h1 {
+  line-height: 110px;
+  padding-top: 37px;
+}
+
+section#fullscreen.fs-coming-soon h2 {
+  font-size: 2.1em;
+}
+
+section#fullscreen.fs-coming-soon h3 {
+  font-size: 48px;
+  padding-top: 25px;
+}
+
+.timer-wrap-outer .timer-wrap span {
+  padding-top: 10px;
+}
+
+.timer-wrap-outer span.sep {
+  padding-top: 0;
+  top: 12px;
+}
+
+div#team div.team-wrap p > span {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, p, span, label, button, li, a, input, textarea, .owl-nav > div{
+  font-family: 'Overpass Mono', monospace;
+}
+
+@media (max-width: 767px) {
+  section#fullscreen.fs-coming-soon h3 {
+    font-size: 30px;
+    padding: 15px 10px 5px;
+  }
+
+  section#fullscreen.fs-coming-soon h1 {
+    padding: 20px 10px 5px;
+    line-height: 120px;
+  }
+
+  section#fullscreen.fs-coming-soon h2 {
+    padding-top: 18px;
+  }
+
+  section#fullscreen.coming-soon-background:before {
+    height: 53%;
+  }
+
+  section#fullscreen.coming-soon-background:after {
+    height: 47%;
+  }
+
+  .timer-wrap-outer span.sep {
+    padding-top: 0;
+    top: -2px;
+    left: -6px;
+    background: transparent;
+  }
+}
+
+
+@media ( min-width: 768px ) and ( max-width: 1024px ) and (orientation: portrait) {
+
+  section#fullscreen.fs-coming-soon h3 {
+    padding-top: 24px;
+  }
+
+  section#fullscreen.fs-coming-soon h1 {
+    padding-top: 45px;
+  }
+
+  section#fullscreen.fs-coming-soon h2 {
+    padding-top: 24px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  section#fullscreen.fs-coming-soon h3 {
+    font-size: 35px;
+    padding-top: 25px;
+  }
+
+  section#fullscreen.fs-coming-soon h1 {
+    padding-top: 27px;
+    line-height: 120px;
+    font-size: 100px;
+  }
+
+  section#fullscreen.fs-coming-soon h2 {
+    font-size: 25px;
+    padding-top: 23px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

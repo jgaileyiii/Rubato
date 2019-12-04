@@ -1,36 +1,68 @@
 <template>
   <div id="app">
-    <header>
-      <h1>Rubato</h1>
-        <h2 v-if="user != null" :key="user.id">{{ user }}</h2>
-      <nav>
-      <ul>
-        <li>
-          <router-link :to="{name: 'Signup'}">Signup</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'Login'}">Login</router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'Projects'}">Projects</router-link>
-        </li>
-      </ul>
-      <button v-on:click="logout">Logout</button>
-      </nav>
-      </header>
-      <router-view />
+    <body class="brutal-landing">
+      <div class="row elem-border">
+        <div class="banner-container">
+          <router-link class="col-sm-8 anchor brand" :to="{name: 'Home'}">
+            <div class="title">
+              <h1 class="stretch-it">Rubato</h1>
+            </div>
+          </router-link>
+        </div>
+        <nav class="">
+          <ul class="nav-items">
+            <div>
+              <li class="btn-style-main">
+                <router-link :to="{name: 'Home'}">Home</router-link>
+              </li>
+            </div>
+             <div>
+              <li class="btn-style-main">
+                <router-link :to="{name: 'About'}">About</router-link>
+              </li>
+            </div>
+            <div>
+              <li class="btn-style-main">
+                <router-link :to="{name: 'Signup'}">Signup</router-link>
+              </li>
+            </div>
+          </ul>
+        </nav>
+              <div class="user-info">
+                  <li class="btn-style-main">
+                    <router-link v-show="!user" :to="{name: 'Login'}">Login</router-link>
+                  </li>
+                  <p class="username" v-if="user != null" :key="user.id">{{ user }}</p>
+                  <button class="btn btn-dark" v-show="user" v-on:click.prevent="logout">Logout</button>
+              </div>
+        </div>
+        <main class="container-fluid">
+            <div v-show="user" class="row elem-border">
+              <div class="projects-header">
+                <div class="btn-style-main">
+                  <router-link class="" :to="{name: 'Projects'}"><h4>Projects</h4></router-link>
+                </div>
+              </div>
+            </div>
+            <router-view></router-view>
+        </main>
+      </body>
+                
+
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'app',
   computed: {
     user() {
-      return this.$store.getters.username
-      }
-    },    
+          return (this.$store.state.username)
+        },
+    projects() {
+      return (this.$store.state.projects)
+    }
+  }, 
   methods: {
     logout(){
       fetch('http://localhost:3000/auth/logout', {
@@ -42,31 +74,10 @@ export default {
           credentials: 'same-origin',
         }).then(localStorage.clear())
           this.$store.dispatch('logout')
-      }
-    }
+      },
+      isOpen(){
+        return null
+      }  
   }
-
+}
 </script>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
