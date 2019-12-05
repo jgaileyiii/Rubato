@@ -12,7 +12,7 @@
             "deadline": "None"
         },
         {
-            "id": 2,
+            "id": 1,
             "title": "Rework Recapitulation",
             "description": "Awkward modulation back to tonic.",
             "status": "Incomplete",
@@ -20,7 +20,7 @@
             "deadline": "None"
         },
         {
-            "id": 3,
+            "id": 1,
             "title": "Clean Up Notation",
             "description": "Fix slurs and dynamics.",
             "status" : "Complete",
@@ -34,7 +34,7 @@
         "name": "Ambient Project: Winter",
         "tasks": 
         [{
-            "id": 1,
+            "id": 2,
             "title": "Field Recording",
             "description": "Take field recordings of wind and forest sounds.",
             "status": "Incomplete",
@@ -50,7 +50,7 @@
             "deadeline": "December 2019" 
         },
         {
-            "id": 3,
+            "id": 2,
             "title": "Record strings and woodwinds",
             "description": "Finish composing string/woodwind parts. Find plug-in with appropriate sound profiles.",
             "status": "Complete",
@@ -63,7 +63,7 @@
         "name": "OSDM Demo Tracks 1-2",
         "tasks": 
         [{  
-            "id": 1,
+            "id": 3,
             "title": "Find film samples for intro/outro music",
             "description": "Reference 60's/70's horror, especially Argento.",
             "status": "Incomplete",
@@ -71,7 +71,7 @@
             "deadline": "March 2020"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "Re-record guitar demo",
             "description": "Tempo and ambient noise issues on takes 1 & 2.",
             "status": "Incomplete",

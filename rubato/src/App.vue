@@ -47,8 +47,6 @@
             <router-view></router-view>
         </main>
       </body>
-                
-
   </div>
 </template>
 

@@ -1,8 +1,6 @@
 <template>
-    <div class="">
-            <section>
-                <h5>{{project.name}}</h5>
-            </section>
+    <div>
+        <h5>{{project.name}}</h5>
     </div>
 </template>
 
@@ -10,6 +8,6 @@
 export default {
     props: {
         project: Object,
-    }
+    },
 }
 </script>

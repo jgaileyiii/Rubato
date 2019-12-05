@@ -11,7 +11,10 @@ export default new Vuex.Store({
     projectTasks: []
   },
   getters: {
-    username: state => state.username
+    getProjectTasksById: state => project => {
+      state.projectTasks = project.tasks
+      return state.projectTasks
+    }
   },
   mutations: {
     setUser(state, user){
@@ -30,6 +33,9 @@ export default new Vuex.Store({
     },
     setProjects(state, projects){
       state.projectList = projects
+    },
+    setProjectTasks(state, tasks){
+      state.projectTasks = tasks
     }
   },
   actions: {
@@ -54,8 +60,18 @@ export default new Vuex.Store({
             .then(response => response.json())
             .then(response => {
               commit("setProjects", response.projects)
-              console.log(response.projects)
             })
+        },
+        getProjectTasks({ commit }){
+          fetch("./projects.json")
+            .then(response => response.json())
+            .then(response => {
+              commit('setProjectTasks', response.projects.map(project => project.tasks))
+              console.log(response.projects.map(project => project.tasks))
+            })
+          },
+        addProject({commit}, project){
+          commit('addProject', project)
         }
       },
   modules: {
